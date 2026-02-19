@@ -1,0 +1,15 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:bed663814b27b5c0317026a4a7285d29",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-02-19T15:29:24.104318",
+    "component": {
+      "type": "application",
+      "name": "auto-debug-ts"
+    }
+  },
+  "components": [],
+  "note": "Run 'pip-audit' and 'pip-licenses' for full CVE and license data"
+}

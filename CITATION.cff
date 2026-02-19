@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: 'If you use this software, please cite it using these metadata.'
+type: software
+title: 'auto-debug-ts'
+abstract: 'Automatically identifies and fixes common errors in TypeScript code'
+authors:
+  - family-names: Developer
+    given-names: mehrshud
+repository-code: 'https://github.com/mehrshud/auto-debug-ts'
+url: 'https://omnilertlab.com'
+license: MIT
+version: 1.0.0
+date-released: '2026-02-19'
+keywords:
+  - typescript
+  - express
+  - mongodb
+  - redis
+  - docker
