@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auto-debug-ts
+  labels:
+    app: auto-debug-ts
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: auto-debug-ts
+  template:
+    metadata:
+      labels:
+        app: auto-debug-ts
+    spec:
+      containers:
+      - name: auto-debug-ts
+        image: mehrshud/auto-debug-ts:latest
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: auto-debug-ts-config
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
